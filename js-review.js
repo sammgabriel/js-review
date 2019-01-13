@@ -1,30 +1,42 @@
 console.log("Introduction to JavaScript");
 
-function fizzBuzz() {
 
-    for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
 
-        if ((i % 3 === 0) && (i % 5 === 0)) {
+    if ((i % 3 === 0) && (i % 5 === 0)) {
 
-            console.log("FizzBuzz");
-        }
+        console.log("FizzBuzz");
+    }
 
-        else if ((i % 3 === 0) && (i % 5 !== 0)) {
+    else if ((i % 3 === 0) && (i % 5 !== 0)) {
 
-            console.log("Fizz");
-        }
+        console.log("Fizz");
+    }
 
-        else if ((i % 5 === 0) && (i % 3 !== 0)) {
+    else if ((i % 5 === 0) && (i % 3 !== 0)) {
 
-            console.log("Buzz");
-        }
+        console.log("Buzz");
+    }
 
-        else {
+    else {
 
-            console.log(i);
-        }
-
+        console.log(i);
     }
 }
 
-fizzBuzz();
+function countBs(word) {
+
+    let count = 0;
+
+    for (let i = 0; i < word.length - 1; i++) {
+
+        if (word.charAt(i) === "b".toUpperCase()) {
+
+           count++;
+        }
+    }
+
+    console.log(word + " has " + count + (count > 1 ? " B's." : " B."));
+}
+
+countBs("BumBleBee");
