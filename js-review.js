@@ -40,3 +40,20 @@ function countBs(word) {
 }
 
 countBs("BumBleBee");
+
+function countChar(word, letter) {
+
+    let count = 0;
+
+    for (let i = 0; i < word.length - 1; i++) {
+
+        if (word.charAt(i) === letter) {
+
+            count++;
+        }
+    }
+
+    console.log(word + " has " + count + " " + letter + ((count > 1)  || (count === 0) ? "'s." : "."));
+}
+
+countChar("mammal", "m");
